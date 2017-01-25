@@ -38,11 +38,18 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="chd-4W-Dci" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="chd-4W-Dci" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                             <rect key="frame" x="113" y="37" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="chd-4W-Dci" secondAttribute="height" multiplier="63:11" id="3ML-Sa-D3Z"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="chd-4W-Dci" secondAttribute="trailing" constant="2" id="KXx-9Z-gOz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="chd-4W-Dci" secondAttribute="bottom" constant="1" id="ipu-Lt-LHn"/>
+                                        <constraint firstItem="chd-4W-Dci" firstAttribute="leading" secondItem="Lnf-up-SLB" secondAttribute="leadingMargin" constant="105" id="yCB-7O-E24"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="EZN-0K-cWY" id="MmU-Ty-8Qy"/>
